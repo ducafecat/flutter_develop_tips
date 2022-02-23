@@ -3,11 +3,18 @@ import 'package:flutter/material.dart';
 import 'index.dart';
 
 class AppTheme {
-  // static MaterialColor myColor = stringToColor16("FF725C").materialColor;
   static ThemeData light = ThemeData(
     colorScheme: lightColorScheme,
 
-    // primarySwatch: myColor,
+    // 全局自定义
+    // textTheme: TextTheme(
+    //   displayLarge: ThemeData.light().textTheme.displayLarge?.copyWith(
+    //         color: Colors.blue,
+    //       ),
+    // ),
+
+    // 自定义主色
+    // primarySwatch: "#B36200".toColor().materialColor,
     // brightness: Brightness.light,
 
     // seed 快速

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_material_design3_theme_getx/models/index.dart';
+import 'package:flutter_material_design3_theme_getx/services/index.dart';
 import 'package:get/get.dart';
 
 import 'index.dart';
@@ -58,6 +59,18 @@ class _MainViewGetX extends GetView<MainController> {
           body: SafeArea(
             child: _buildView(),
           ),
+          floatingActionButton: Obx(() {
+            return FloatingActionButton(
+              onPressed: () {
+                GlobalService.to.switchThemeModel();
+              },
+              child: Icon(
+                GlobalService.to.isDarkModel == true
+                    ? Icons.dark_mode
+                    : Icons.light_mode,
+              ),
+            );
+          }),
         );
       },
     );

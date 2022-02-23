@@ -13,13 +13,15 @@ appInit() {
   WidgetsFlutterBinding.ensureInitialized();
   Get.put<GlobalService>(GlobalService());
 
-  runApp(GetMaterialApp(
-    debugShowCheckedModeBanner: false,
-    initialRoute: RouteName.main,
-    theme:
-        GlobalService.to.isDarkModel == true ? AppTheme.dark : AppTheme.light,
-    defaultTransition: Transition.fade,
-    getPages: RoutePages.list,
-    // home: HomePage(),
-  ));
+  runApp(
+    GetMaterialApp(
+      debugShowCheckedModeBanner: false,
+      theme:
+          GlobalService.to.isDarkModel == true ? AppTheme.dark : AppTheme.light,
+      defaultTransition: Transition.fade,
+      // 路由
+      initialRoute: RouteName.main,
+      getPages: RoutePages.list,
+    ),
+  );
 }

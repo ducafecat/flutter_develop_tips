@@ -12,6 +12,7 @@ class MainController extends GetxController {
       KeyValueModel<String>("ColorScheme 颜色", RouteName.colorScheme),
       KeyValueModel<String>("MaterialColor 色阶", RouteName.materialColor),
       KeyValueModel<String>("Typography 字体", RouteName.typography),
+      KeyValueModel<String>("AppBar 局部背景修改", RouteName.localAppbar),
     ]);
 
     update(["main"]);

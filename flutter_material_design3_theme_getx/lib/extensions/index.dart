@@ -1,3 +1,4 @@
-library extension;
+library extensions;
 
-export 'color_material.dart';
+export 'color.dart';
+export 'string.dart';

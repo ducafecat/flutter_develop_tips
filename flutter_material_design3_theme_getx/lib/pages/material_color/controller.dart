@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_material_design3_theme_getx/extensions/index.dart';
 import 'package:flutter_material_design3_theme_getx/models/index.dart';
-import 'package:flutter_material_design3_theme_getx/utils/index.dart';
 import 'package:get/get.dart';
 
 class MaterialColorController extends GetxController {
@@ -12,7 +11,7 @@ class MaterialColorController extends GetxController {
   List<KeyValueModel<Color>> items = [];
 
   _initData() {
-    myColor = stringToColor16("FF725C").materialColor;
+    myColor = "#B36200".toColor().materialColor;
     items = [
       KeyValueModel<Color>("50", myColor.shade50),
       KeyValueModel<Color>("100", myColor.shade100),

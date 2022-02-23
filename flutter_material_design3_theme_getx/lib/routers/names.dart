@@ -3,4 +3,5 @@ class RouteName {
   static const typography = '/typography';
   static const colorScheme = '/color_scheme';
   static const materialColor = '/material_color';
+  static const localAppbar = '/local_appbar';
 }

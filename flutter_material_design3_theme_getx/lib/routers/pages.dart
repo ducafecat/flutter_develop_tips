@@ -21,5 +21,9 @@ class RoutePages {
       name: RouteName.materialColor,
       page: () => const MaterialColorPage(),
     ),
+    GetPage(
+      name: RouteName.localAppbar,
+      page: () => const LocalAppbarPage(),
+    ),
   ];
 }
