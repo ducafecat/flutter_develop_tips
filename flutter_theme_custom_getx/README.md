@@ -1,6 +1,6 @@
-# Flutter GetX 插件使用 Material Design3 指导示例代码
+# Flutter + GetX 自定义样式（全局、局部）
 
-![tips-getx-material-design3](https://ducafecat.oss-cn-beijing.aliyuncs.com/podcast/tips-getx-material-design3.png)
+![](https://ducafecat.oss-cn-beijing.aliyuncs.com/podcast/20220225123657.png)
 
 ## 视频
 
