@@ -1,8 +1,15 @@
 # Flutter GetX 插件使用 Material Design3 指导示例代码
 
-![tips-getx-material-design3](https://ducafecat.oss-cn-beijing.aliyuncs.com/podcast/tips-getx-material-design3.png)
+<img src="https://ducafecat.oss-cn-beijing.aliyuncs.com/podcast/20220225123720.png" style="zoom:25%;float:left;" />
+<img src="https://ducafecat.oss-cn-beijing.aliyuncs.com/podcast/20220225123759.png" style="zoom:25%;float:left;" />
+<img src="https://ducafecat.oss-cn-beijing.aliyuncs.com/podcast/20220225123818.png" style="zoom:25%;float:left;" />
+<img src="https://ducafecat.oss-cn-beijing.aliyuncs.com/podcast/20220225123837.png" style="zoom:25%;" />
 
 ## 视频
+
+<iframe src="//player.bilibili.com/player.html?aid=936996374&bvid=BV1aT4y1S7pB&cid=519506964&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+
+https://www.bilibili.com/video/BV1aT4y1S7pB
 
 ## 文章
 
