@@ -4,8 +4,11 @@
 
 ![tips-getx-material-design3](https://ducafecat.oss-cn-beijing.aliyuncs.com/podcast/tips-getx-material-design3.png)
 
-[Flutter + GetX 自定义样式（全局、局部）](flutter_theme_custom_getx)
-[Flutter GetX 插件使用 Material Design3 指导示例代码](flutter_material_design3_theme_getx)
+- [Flutter + GetX 自定义样式（全局、局部）](flutter_theme_custom_getx)
+
+- [Flutter GetX 插件使用 Material Design3 指导示例代码](flutter_material_design3_theme_getx)
+
+---
 
 ---
 
