@@ -25,4 +25,4 @@ https://ducafecat.tech/2022/02/23/2022/flutter-material-design3-theme-getx/
 
 - [bilibili](https://space.bilibili.com/404904528)
 
-![订阅号](https://ducafecat.tech/img/banner-gzh.png)
+![订阅号](https://ducafecat.oss-cn-beijing.aliyuncs.com/podcast/20220302165922.png)
