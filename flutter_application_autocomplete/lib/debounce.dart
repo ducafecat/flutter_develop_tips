@@ -31,38 +31,49 @@ class _DebouncePageState extends State<DebouncePage> {
 
   Widget _mainView() {
     return Autocomplete<Country>(
+      // 返回可选列表数据值
       optionsBuilder: (TextEditingValue textEditingValue) async {
         debounceValue = textEditingValue.text;
-        // 防抖处理
-        // 防抖状态下直接返回空 List []
-        if (isDebounce) {
-          return Future.value([]);
-        } else {
-          isDebounce = true; // 设置防抖标志
-          // 1秒防抖直接返回 FutureOr
-          return Future.delayed(const Duration(seconds: 1), () async {
-            List<Country> rows = [];
-            // http 拉取数据
-            try {
-              rows = await Future.delayed(
-                  const Duration(milliseconds: 500), // 延迟 500 毫秒，模拟 http 请求
-                  () => countryOptions
-                      .where((Country county) => county.name
-                          .toLowerCase()
-                          .startsWith(debounceValue.toLowerCase()))
-                      .toList());
-            } finally {
-              isDebounce = false; // 关闭防抖标志
-            }
-            return rows;
-          });
-        }
+        return countryOptions
+            .where((Country county) => county.name
+                .toLowerCase()
+                .startsWith(debounceValue.toLowerCase()))
+            .toList();
       },
 
-      // 返回选择选项时显示在字段中的字符串。
+      // // 返回可选列表数据值
+      // optionsBuilder: (TextEditingValue textEditingValue) async {
+      //   debounceValue = textEditingValue.text;
+      //   // 防抖处理
+      //   // 防抖状态下直接返回空 List []
+      //   if (isDebounce) {
+      //     return Future.value([]);
+      //   } else {
+      //     isDebounce = true; // 设置防抖标志
+      //     // 1秒防抖直接返回 FutureOr
+      //     return Future.delayed(const Duration(seconds: 1), () async {
+      //       List<Country> rows = [];
+      //       // http 拉取数据
+      //       try {
+      //         rows = await Future.delayed(
+      //             const Duration(milliseconds: 500), // 延迟 500 毫秒，模拟 http 请求
+      //             () => countryOptions
+      //                 .where((Country county) => county.name
+      //                     .toLowerCase()
+      //                     .startsWith(debounceValue.toLowerCase()))
+      //                 .toList());
+      //       } finally {
+      //         isDebounce = false; // 关闭防抖标志
+      //       }
+      //       return rows;
+      //     });
+      //   }
+      // },
+
+      // 格式化显示字段
       displayStringForOption: (Country option) => option.name,
 
-      // 构建其输入用于获取选项的字段。
+      // 输入字段组件
       fieldViewBuilder: (
         BuildContext context,
         TextEditingController fieldTextEditingController,
@@ -80,14 +91,14 @@ class _DebouncePageState extends State<DebouncePage> {
         );
       },
 
-      // 当用户选择一个选项时调用。
+      // 选中项时
       onSelected: (Country selection) {
         if (kDebugMode) {
           print('Selected: ${selection.name}');
         }
       },
 
-      // 从选项对象列表构建可选择的选项小部件。
+      // 构建下拉列表项
       optionsViewBuilder: (
         BuildContext context,
         AutocompleteOnSelected<Country> onSelected,
