@@ -118,6 +118,21 @@ class _RoundPageState extends State<RoundPage> {
     );
   }
 
+  // 使用圆角矩形剪辑创建物理模型。
+  Widget _buildPhysicalModel() {
+    return PhysicalModel(
+      color: Colors.transparent,
+      borderRadius: const BorderRadius.all(Radius.circular(50)),
+      clipBehavior: Clip.antiAlias,
+      child: Image.asset(
+        'assets/desktop.jpg',
+        width: 300,
+        height: 300,
+        fit: BoxFit.cover,
+      ),
+    );
+  }
+
   Widget mainView() {
     return SingleChildScrollView(
       child: Center(
@@ -133,6 +148,9 @@ class _RoundPageState extends State<RoundPage> {
 
             // path
             _buildClipPath(),
+
+            // physicalModel
+            _buildPhysicalModel(),
           ],
         ),
       ),
