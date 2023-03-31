@@ -1,12 +1,23 @@
+import 'dart:math';
 import 'package:flutter/material.dart';
 
-class MyCustomClipper1 extends CustomClipper<Path> {
+class StartClipper extends CustomClipper<Path> {
   @override
   Path getClip(Size size) {
-    var path = Path();
-    // 四个圆角，圆角半径为20
-    path.addRRect(RRect.fromLTRBR(
-        0, 0, size.width, size.height, const Radius.circular(20)));
+    final path = Path();
+    final radius = size.width / 2;
+    final centerX = size.width / 2;
+    final centerY = size.height / 2;
+    const angle = 2 * pi / 5;
+
+    path.moveTo(centerX + radius * cos(0), centerY + radius * sin(0));
+    for (var i = 1; i < 5; i++) {
+      path.lineTo(
+        centerX + radius * cos(angle * i),
+        centerY + radius * sin(angle * i),
+      );
+    }
+    path.close();
     return path;
   }
 
@@ -26,11 +37,14 @@ class RoundPage extends StatefulWidget {
 class _RoundPageState extends State<RoundPage> {
   Widget _buildClipRRect() {
     return ClipRRect(
-      borderRadius: BorderRadius.circular(10),
+      borderRadius: const BorderRadius.only(
+        topLeft: Radius.circular(50),
+        topRight: Radius.circular(50),
+      ),
       child: Image.asset(
         'assets/desktop.jpg',
-        width: 100,
-        height: 100,
+        width: 300,
+        height: 300,
         fit: BoxFit.cover,
       ),
     );
@@ -40,20 +54,8 @@ class _RoundPageState extends State<RoundPage> {
     return ClipOval(
       child: Image.asset(
         'assets/desktop.jpg',
-        width: 100,
-        height: 100,
-        fit: BoxFit.cover,
-      ),
-    );
-  }
-
-  Widget _buildClipPath() {
-    return ClipPath(
-      clipper: MyCustomClipper1(),
-      child: Image.asset(
-        'assets/desktop.jpg',
-        width: 100,
-        height: 100,
+        width: 300,
+        height: 300,
         fit: BoxFit.cover,
       ),
     );
@@ -62,27 +64,77 @@ class _RoundPageState extends State<RoundPage> {
   Widget _buildBoxDecoration() {
     return Container(
       decoration: const BoxDecoration(
-        borderRadius: BorderRadius.all(Radius.circular(10)),
+        borderRadius: BorderRadius.all(Radius.circular(50)),
         image: DecorationImage(
           image: AssetImage('assets/desktop.jpg'),
           fit: BoxFit.cover,
         ),
       ),
-      width: 100,
-      height: 100,
+      width: 300,
+      height: 300,
+    );
+  }
+
+  // 错误示范，不能使用Container的decoration属性来设置圆角图片
+  Widget _buildBoxDecoration2() {
+    return Container(
+      decoration: const BoxDecoration(
+        borderRadius: BorderRadius.all(Radius.circular(50)),
+        color: Colors.amber,
+        // image: DecorationImage(
+        //   image: AssetImage('assets/desktop.jpg'),
+        //   fit: BoxFit.cover,
+        // ),
+      ),
+      width: 300,
+      height: 300,
+      child: Image.asset(
+        'assets/desktop.jpg',
+        fit: BoxFit.fill,
+      ),
+    );
+  }
+
+  Widget _buildClipPath() {
+    return ClipPath(
+      clipper: StartClipper(),
+      child: Container(
+        decoration: const BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage('assets/desktop.jpg'),
+            fit: BoxFit.cover,
+          ),
+        ),
+        width: 300,
+        height: 300,
+      ),
+
+      // child: Image.asset(
+      //   'assets/desktop.jpg',
+      //   width: 300,
+      //   height: 300,
+      //   fit: BoxFit.cover,
+      // ),
     );
   }
 
   Widget mainView() {
-    return Center(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
-        children: [
-          _buildClipRRect(),
-          _buildClipOval(),
-          _buildClipPath(),
-          _buildBoxDecoration(),
-        ],
+    return SingleChildScrollView(
+      child: Center(
+        child: Column(
+          children: [
+            // box
+            _buildBoxDecoration2(),
+            _buildBoxDecoration(),
+
+            // clip
+            _buildClipRRect(),
+            _buildClipOval(),
+
+            // path
+            _buildClipPath(),
+          ],
+        ),
       ),
     );
   }
@@ -93,6 +145,7 @@ class _RoundPageState extends State<RoundPage> {
       appBar: AppBar(
         title: const Text('圆角图片'),
       ),
+      backgroundColor: Colors.grey,
       body: mainView(),
     );
   }
