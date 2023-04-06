@@ -11,6 +11,8 @@ https://ducafecat.com/blog
 - [Flutter + GetX 自定义样式（全局、局部）](flutter_theme_custom_getx)
 - [Flutter GetX 插件使用 Material Design3 指导示例代码](flutter_material_design3_theme_getx)
 - [Flutter AutoComplete Debounce 防抖](flutter_application_autocomplete)
+- [Flutter 中圆角处理的详细指南](flutter_application_rounded)
+- [Flutter 中的动态主题设置](flutter_application_dynamic_themes)
 
 ---
 

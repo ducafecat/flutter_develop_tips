@@ -37,10 +37,11 @@ class RoundPage extends StatefulWidget {
 class _RoundPageState extends State<RoundPage> {
   Widget _buildClipRRect() {
     return ClipRRect(
-      borderRadius: const BorderRadius.only(
-        topLeft: Radius.circular(50),
-        topRight: Radius.circular(50),
-      ),
+      // borderRadius: const BorderRadius.only(
+      //   topLeft: Radius.circular(50),
+      //   topRight: Radius.circular(50),
+      // ),
+      borderRadius: const BorderRadius.all(Radius.circular(300 / 2)),
       child: Image.asset(
         'assets/desktop.jpg',
         width: 300,
@@ -139,15 +140,15 @@ class _RoundPageState extends State<RoundPage> {
         child: Column(
           children: [
             // box
-            _buildBoxDecoration2(),
-            _buildBoxDecoration(),
+            // _buildBoxDecoration2(),
+            // _buildBoxDecoration(),
 
             // clip
-            _buildClipRRect(),
-            _buildClipOval(),
+            // _buildClipRRect(),
+            // _buildClipOval(),
 
             // path
-            _buildClipPath(),
+            // _buildClipPath(),
 
             // physicalModel
             _buildPhysicalModel(),
