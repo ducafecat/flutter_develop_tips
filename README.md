@@ -13,6 +13,7 @@ https://ducafecat.com/blog
 - [Flutter AutoComplete Debounce 防抖](flutter_application_autocomplete)
 - [Flutter 中圆角处理的详细指南](flutter_application_rounded)
 - [Flutter 中的动态主题设置](flutter_application_dynamic_themes)
+- [Flutter 中使用 Widgetbook 管理你的组件](flutter-widgetbook)
 
 ---
 
