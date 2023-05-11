@@ -1,3 +1,5 @@
+// ignore_for_file: depend_on_referenced_packages
+
 import 'package:flutter/material.dart';
 import 'package:widgetbook/widgetbook.dart';
 import 'package:widgetbook_in_flutter_course/widgets/button.dart';
@@ -15,18 +17,18 @@ class HotReload extends StatelessWidget {
   Widget build(BuildContext context) {
     return Widgetbook.material(
       addons: [
-        // 主题
-        // buildMaterialThemeAddon(),
+        // // 主题
+        buildMaterialThemeAddon(),
 
-        // 字体大小
-        // buildTextScaleAddon(),
+        // // 字体大小
+        buildTextScaleAddon(),
       ],
       directories: [
-        //
-        // buildWidgetbookCategory(),
+        // 基础组件
+        buildWidgetbookCategory(),
 
-        //
-        //buildWidgetbookCategory2(),
+        // 业务组件
+        buildWidgetbookCategory2(),
       ],
     );
   }
