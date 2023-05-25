@@ -1,0 +1,25 @@
+
+      GetPage(
+        name: RouteNames.orderConfirm,
+        page: () => const OrderConfirmPage(),
+      ),
+      GetPage(
+        name: RouteNames.orderDone,
+        page: () => const OrderDonePage(),
+      ),
+      GetPage(
+        name: RouteNames.productDetail,
+        page: () => const ProductDetailPage(),
+      ),
+      GetPage(
+        name: RouteNames.productList,
+        page: () => const ProductListPage(),
+      ),
+      GetPage(
+        name: RouteNames.systemMain,
+        page: () => const SystemMainPage(),
+      ),
+      GetPage(
+        name: RouteNames.userProfile,
+        page: () => const UserProfilePage(),
+      ),
