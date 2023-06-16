@@ -77,23 +77,23 @@ class OnePageState extends State<OnePage> {
             child: const Text('03 - isolate 嵌套执行'),
             onPressed: () async {
               final isolate = await FlutterIsolate.spawn(isolate1, "hello");
-              // // 5 秒后暂停
-              // Timer(const Duration(seconds: 5), () {
-              //   print("Pausing Isolate 1");
-              //   isolate.pause();
-              // });
+              // 5 秒后暂停
+              Timer(const Duration(seconds: 5), () {
+                print("Pausing Isolate 1");
+                isolate.pause();
+              });
 
-              // // 10 秒后恢复
-              // Timer(const Duration(seconds: 10), () {
-              //   print("Resuming Isolate 1");
-              //   isolate.resume();
-              // });
+              // 10 秒后恢复
+              Timer(const Duration(seconds: 10), () {
+                print("Resuming Isolate 1");
+                isolate.resume();
+              });
 
-              // // 20 秒后杀死
-              // Timer(const Duration(seconds: 20), () {
-              //   print("Killing Isolate 1");
-              //   isolate.kill();
-              // });
+              // 20 秒后杀死
+              Timer(const Duration(seconds: 20), () {
+                print("Killing Isolate 1");
+                isolate.kill();
+              });
             },
           ),
           ElevatedButton(
