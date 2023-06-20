@@ -1,10 +1,12 @@
 // ignore_for_file: avoid_print
 
-import 'package:dart_ping/dart_ping.dart';
+import 'package:dart_ping_ios/dart_ping_ios.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_ping/ping.dart';
 
 void main() {
+  DartPingIOS.register();
+
   runApp(const MyApp());
 }
 

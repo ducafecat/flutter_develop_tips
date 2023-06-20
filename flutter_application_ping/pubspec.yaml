@@ -37,6 +37,7 @@ dependencies:
   cupertino_icons: ^1.0.2
 
   dart_ping: ^8.0.1
+  dart_ping_ios: ^3.0.0
 
 dev_dependencies:
   flutter_test:
