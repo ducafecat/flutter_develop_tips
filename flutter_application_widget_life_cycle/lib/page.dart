@@ -24,7 +24,7 @@ class _LifeCyclePageState extends State<LifeCyclePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             // StatelessWidget 组件
-            TitleWidget(title: _title),
+            // TitleWidget(title: _title),
 
             // StatefulWidget 组件
             if (_closeCounter == false) CounterWidget(title: _title),
@@ -55,6 +55,8 @@ class _LifeCyclePageState extends State<LifeCyclePage> {
               },
               child: const Text("关闭 counter"),
             ),
+
+            //
           ],
         ),
       ),
