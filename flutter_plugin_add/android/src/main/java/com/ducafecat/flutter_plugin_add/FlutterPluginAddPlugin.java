@@ -92,6 +92,12 @@ public class FlutterPluginAddPlugin implements FlutterPlugin, MethodCallHandler 
   @Override
   public void onDetachedFromEngine(@NonNull FlutterPluginBinding binding) {
     channel.setMethodCallHandler(null);
+    if(eventHandler != null) {
+      eventChannel.endOfStream();
+      eventHandler.removeCallbacks(runnable);
+      eventHandler = null;
+      eventChannel = null;
+    }
   }
 
   private int add(int a, int b) {
