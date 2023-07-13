@@ -19,12 +19,22 @@ class _MyAppState extends State<MyApp> {
   String _platformVersion = 'Unknown';
   final _flutterPluginAddPlugin = FlutterPluginAdd();
 
+  // 加法返回
   int addResult = 0;
+
+  // 计数器返回
+  int counterResult = 0;
 
   @override
   void initState() {
     super.initState();
     initPlatformState();
+  }
+
+  @override
+  void deactivate() {
+    _flutterPluginAddPlugin.dispose();
+    super.deactivate();
   }
 
   // Platform messages are asynchronous, so we initialize in an async method.
@@ -72,6 +82,27 @@ class _MyAppState extends State<MyApp> {
                 },
                 child: const Text('add'),
               ),
+
+              // 计数 event
+              Text('count: $counterResult'),
+              ElevatedButton(
+                onPressed: () {
+                  _flutterPluginAddPlugin.startCounting((value) {
+                    setState(() {
+                      counterResult = value;
+                    });
+                  });
+                },
+                child: const Text('开始计数'),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  _flutterPluginAddPlugin.cancelCounting();
+                },
+                child: const Text('结束计数'),
+              ),
+
+              //
             ],
           ),
         ),

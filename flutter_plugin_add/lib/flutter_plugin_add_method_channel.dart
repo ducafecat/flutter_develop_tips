@@ -27,4 +27,10 @@ class MethodChannelFlutterPluginAdd extends FlutterPluginAddPlatform {
     );
     return val;
   }
+
+  @override
+  Future<bool?> startCounting() async {
+    final val = await methodChannel.invokeMethod<bool>('startCounting');
+    return val;
+  }
 }

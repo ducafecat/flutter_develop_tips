@@ -30,4 +30,8 @@ abstract class FlutterPluginAddPlatform extends PlatformInterface {
   Future<int?> add(int a, int b) {
     throw UnimplementedError('add() has not been implemented.');
   }
+
+  Future<bool?> startCounting() {
+    throw UnimplementedError('startCounting() has not been implemented.');
+  }
 }
