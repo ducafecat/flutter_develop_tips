@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'nested.dart';
 import 'page.dart';
 
 void main() {
@@ -27,7 +28,8 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         useMaterial3: true,
       ),
-      home: const MyPageView(),
+      // home: const MyPageView(),
+      home: const NestedScrollPage(),
     );
   }
 }
