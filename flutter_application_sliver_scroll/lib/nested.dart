@@ -20,7 +20,7 @@ class _NestedScrollPageState extends State<NestedScrollPage> {
         child: NestedScrollView(
           headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) {
             return <Widget>[
-              _buildHeader(innerBoxIsScrolled),
+              _buildHeader(context, innerBoxIsScrolled),
             ];
           },
           body: _buildTabBarView(),
@@ -30,7 +30,7 @@ class _NestedScrollPageState extends State<NestedScrollPage> {
   }
 
   // 头部
-  Widget _buildHeader(bool innerBoxIsScrolled) {
+  Widget _buildHeader(BuildContext context, bool innerBoxIsScrolled) {
     return // SliverOverlapAbsorber 的作用是处理重叠滚动效果，
         // 防止 CustomScrollView 中的滚动视图与其他视图重叠。
         SliverOverlapAbsorber(
