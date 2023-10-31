@@ -1,0 +1,2 @@
+static const productList = '/product_list';
+static const productList2 = '/product_list2';

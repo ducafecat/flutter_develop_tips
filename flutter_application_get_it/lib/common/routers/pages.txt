@@ -1,0 +1,9 @@
+
+      GetPage(
+        name: RouteNames.productList,
+        page: () => const ProductListPage(),
+      ),
+      GetPage(
+        name: RouteNames.productList2,
+        page: () => const ProductList2Page(),
+      ),
