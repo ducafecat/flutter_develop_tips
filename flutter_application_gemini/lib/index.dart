@@ -71,7 +71,7 @@ class _IndexPapeState extends State<IndexPape> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Google Gemini AI 水贴王'),
+        title: const Text('Google Gemini AI 水贴'),
       ),
       body: _buildView(),
     );
