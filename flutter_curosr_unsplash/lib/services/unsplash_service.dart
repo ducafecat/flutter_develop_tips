@@ -49,7 +49,7 @@ class UnsplashCategory {
 class UnsplashService {
   static const String _baseUrl = 'https://api.unsplash.com';
   static const String _accessKey =
-      'VezcK7F9S9HW-wvXtXcVD2VOKRP6ozKaKk_NPjT1o0w'; // 请替换成你的access key
+      ''; // 请替换成你的access key
 
   // 预定义分类列表
   static final List<UnsplashCategory> categories = [
