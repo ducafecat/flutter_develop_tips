@@ -1,14 +1,14 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
 
-class GamepadPage extends StatefulWidget {
-  const GamepadPage({super.key});
+class GamepadEasyPage extends StatefulWidget {
+  const GamepadEasyPage({super.key});
 
   @override
-  State<GamepadPage> createState() => _GamepadPageState();
+  State<GamepadEasyPage> createState() => _GamepadEasyPageState();
 }
 
-class _GamepadPageState extends State<GamepadPage> {
+class _GamepadEasyPageState extends State<GamepadEasyPage> {
   // 摇杆的X轴位置值，范围 -1.0 到 1.0
   double joystickX = 0.0;
 
