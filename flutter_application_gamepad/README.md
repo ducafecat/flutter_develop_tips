@@ -1,5 +1,15 @@
 # 游戏手柄
 
+![flutter-gamepad-joystick](https://files.ducafecat.com:443/docs/2025/07/31/ad7fef638248b7eb205bd96bfd86d879.png)
+
+## 项目介绍
+
+虚拟游戏摇杆组件代码。
+
+## 文档
+
+https://ducafecat.com/blog/flutter-game-joystick-component
+
 ## flutter sdk 版本
 
 ```sh
