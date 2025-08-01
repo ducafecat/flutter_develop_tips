@@ -20,20 +20,26 @@ Engine • revision ef0cd00091 (6 天前) • 2025-07-24 12:23:50 -0700
 Tools • Dart 3.8.1 • DevTools 2.45.1
 ```
 
-## 猫哥
+---
+
+© 猫哥
+
+## 产品
 
 - [猫哥学习站](https://ducafecat.com/)
 - [Flutter GetX Generator](https://marketplace.visualstudio.com/items?itemName=ducafecat.getx-template)
+- [Flutter 优秀插件](https://flutter.ducafecat.com)
 
 ## links
 
 - [Github](https://github.com/ducafecat)
 - [B 站](https://space.bilibili.com/404904528)
 - [油管](https://www.youtube.com/@ducafecat)
+- 小红书 猫哥 2263098477
+- 微信 ducafecat
 
 ## flutter 学习路径
 
-- [Flutter 优秀插件推荐](https://flutter.ducafecat.com)
 - [Flutter 基础篇 1 - Dart 语言学习](https://ducafecat.com/course/dart-learn)
 - [Flutter 基础篇 2 - 快速上手](https://ducafecat.com/course/flutter-quickstart-learn)
 - [Flutter 实战 1 - Getx Woo 电商 APP](https://ducafecat.com/course/flutter-woo-2025)
