@@ -35,10 +35,10 @@ class MyApp extends StatelessWidget {
       ),
 
       // 完整版
-      home: const GamepadPage(),
+      // home: const GamepadPage(),
 
       // 简易版
-      // home: const GamepadEasyPage(),
+      home: const GamepadEasyPage(),
     );
   }
 }

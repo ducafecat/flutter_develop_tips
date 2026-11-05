@@ -31,6 +31,7 @@ class _GamepadEasyPageState extends State<GamepadEasyPage> {
           children: [
             // 虚拟摇杆组件
             VirtualJoystick(
+              size: 240.0,
               onChanged: (x, y, angle, distance) {
                 setState(() {
                   joystickX = x; // 更新X轴数值
