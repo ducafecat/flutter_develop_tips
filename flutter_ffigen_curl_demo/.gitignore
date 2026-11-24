@@ -1,0 +1,8 @@
+.dart_tool/
+.flutter-plugins-dependencies
+build/
+.DS_Store
+macos/Flutter/ephemeral/
+macos/Flutter/GeneratedPluginRegistrant.swift
+**/xcuserdata/
+tmp/

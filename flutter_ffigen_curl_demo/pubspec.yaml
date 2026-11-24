@@ -1,0 +1,23 @@
+name: flutter_ffigen_curl_demo
+description: A Flutter desktop download demo using FFIgen and libcurl.
+publish_to: none
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.14.0 <4.0.0'
+  flutter: '>=3.50.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  code_assets: ^2.2.0
+  ffi: ^2.2.0
+  hooks: ^2.2.0
+  material_ui: ^1.11.1
+  native_toolchain_c: ^0.19.6
+
+dev_dependencies:
+  ffigen: 23.0.0
+
+flutter:
+  uses-material-design: true
